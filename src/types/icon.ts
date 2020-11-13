@@ -1,6 +1,6 @@
-import { signal } from './signal';
+import { Signal } from './signal';
 
-export type icon = {
-	signal: signal;
+export type Icon = {
+	signal: Signal;
 	index: number;
 };

@@ -1,7 +1,7 @@
-import { signal } from './signal';
-import { icon } from './icon';
+import { Signal } from './signal';
+import { Icon } from './icon';
 
-export type deconstructionPlanner = {
+export type DeconstructionPlanner = {
 	deconstruction_planner: {
 		settings: null | {
 			trees_and_rocks_only?: boolean;
@@ -14,7 +14,7 @@ export type deconstructionPlanner = {
 				index: number;
 			}[];
 			description?: string;
-			icons?: icon[];
+			icons?: Icon[];
 		};
 		item: 'deconstruction-planner';
 		label?: string;

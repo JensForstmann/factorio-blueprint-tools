@@ -1,6 +1,6 @@
-import { position } from './position';
+import { Position } from './position';
 
-export type tile = {
+export type Tile = {
 	name: string;
-	position: position;
+	position: Position;
 };

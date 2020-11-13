@@ -1,6 +1,6 @@
-import { blueprint } from './blueprint';
-import { blueprintBook } from './blueprintBook';
-import { deconstructionPlanner } from './deconstructionPlanner';
-import { upgradePlanner } from './upgradePlanner';
+import { Blueprint } from './blueprint';
+import { BlueprintBook } from './blueprintBook';
+import { DeconstructionPlanner } from './deconstructionPlanner';
+import { UpgradePlanner } from './upgradePlanner';
 
-export type plan = blueprint | blueprintBook | deconstructionPlanner | upgradePlanner;
+export type Plan = Blueprint | BlueprintBook | DeconstructionPlanner | UpgradePlanner;

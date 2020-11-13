@@ -1,4 +1,4 @@
-export type itemFilter = {
+export type ItemFilter = {
 	name: string;
 	index: number;
 };

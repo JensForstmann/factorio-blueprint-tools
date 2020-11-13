@@ -1,4 +1,4 @@
-export type signal = {
+export type Signal = {
 	type: string;
 	name: string;
 };

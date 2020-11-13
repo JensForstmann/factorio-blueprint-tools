@@ -1,4 +1,4 @@
-export type position = {
+export type Position = {
 	x: number;
 	y: number;
 };

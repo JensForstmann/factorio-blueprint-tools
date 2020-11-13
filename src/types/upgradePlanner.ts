@@ -1,4 +1,4 @@
-export type upgradePlanner = {
+export type UpgradePlanner = {
 	upgrade_planner: {
 		settings: {
 			mappers: {}[];

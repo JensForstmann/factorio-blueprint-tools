@@ -1,11 +1,11 @@
-import { position } from './position';
-import { color } from './color';
-import { itemFilter } from './itemFilter';
+import { Position } from './position';
+import { Color } from './color';
+import { ItemFilter } from './itemFilter';
 
-export type entity = {
+export type Entity = {
 	entity_number: number;
 	name: string;
-	position: position;
+	position: Position;
 	direction?: number;
 	orientation?: number;
 	connections?: any;
@@ -13,24 +13,24 @@ export type entity = {
 	items?: { [key: string]: number };
 	recipe?: string;
 	bar?: number;
-	inventory?: { filters: itemFilter[]; bar: number };
+	inventory?: { filters: ItemFilter[]; bar: number };
 	infinity_settings?: any;
 	type?: 'input' | 'output';
 	input_priority?: 'right' | 'left';
 	output_priority?: 'right' | 'left';
 	filter?: string;
-	filters?: itemFilter[];
+	filters?: ItemFilter[];
 	filter_mode?: 'whitelist' | 'blacklist';
 	override_stack_size?: number;
-	drop_position?: position;
-	pickup_position?: position;
+	drop_position?: Position;
+	pickup_position?: Position;
 	request_filters?: any;
 	request_from_buffers?: boolean;
 	parameters?: any;
 	alert_parameters?: any;
 	auto_launch?: boolean;
 	variation?: any;
-	color?: color;
+	color?: Color;
 	station?: string;
 
 	// electric-energy-interface

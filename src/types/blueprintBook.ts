@@ -1,8 +1,8 @@
-import { plan } from './plan';
+import { Plan } from './plan';
 
-export type blueprintBook = {
+export type BlueprintBook = {
 	blueprint_book: {
-		blueprints: Array<plan & { index: number }>;
+		blueprints: Array<Plan & { index: number }>;
 		active_index: number;
 		item: 'blueprint-book';
 		label?: string;
