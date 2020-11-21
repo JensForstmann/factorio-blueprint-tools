@@ -1,3 +1,4 @@
+import { Icon } from './icon';
 import { Plan } from './plan';
 
 export type BlueprintBook = {
@@ -6,6 +7,8 @@ export type BlueprintBook = {
 		active_index: number;
 		item: 'blueprint-book';
 		label?: string;
+		description?: string;
+		icons?: Icon[];
 		version: number;
 	};
 };

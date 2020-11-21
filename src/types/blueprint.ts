@@ -9,6 +9,7 @@ export type Blueprint = {
 		tiles?: Tile[];
 		item: 'blueprint';
 		label?: string;
+		description?: string;
 		version: number;
 	};
 };

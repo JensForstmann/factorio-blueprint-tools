@@ -13,6 +13,7 @@ export type DeconstructionPlanner = {
 				name: string;
 				index: number;
 			}[];
+			tile_selection_mode?: number;
 			description?: string;
 			icons?: Icon[];
 		};
