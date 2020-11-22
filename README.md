@@ -11,11 +11,13 @@
 
 Make sure you have this line in you `.npmrc` file, so you can load the package from the GitHub package repository:
 
-    @jensforstmann:registry=https://npm.pkg.github.com/jensforstmann
+    @jensforstmann:registry=https://npm.pkg.github.com
 
 Then install the package:
 
     npm install @jensforstmann/factorio-blueprint-tools
+    # or
+    yarn add @jensforstmann/factorio-blueprint-tools
 
 
 And use it in code:
