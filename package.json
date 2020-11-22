@@ -1,16 +1,20 @@
 {
-  "name": "factorio-blueprint-tools",
+  "name": "@jensforstmann/factorio-blueprint-tools",
   "version": "1.2.0",
-  "description": "",
+  "description": "JS/TS library for encoding and decoding Factorio blueprint strings (fully typed)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "clean": "prettier --write ./src",
-    "test": "nyc mocha --timeout 20000 test/**/*.ts"
+    "test": "nyc mocha --timeout 20000 test/**/*.ts",
+    "prepare": "npm run build"
   },
   "author": "Jens Forstmann",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "pako": "^2.0.2"
   },
