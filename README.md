@@ -9,9 +9,23 @@
 
 ## Usage
 
-    import * as factorioBlueprintTools from 'factorio-blueprint-tools';
-    // or
-    const factorioBlueprintTools = require('factorio-blueprint-tools');
+Make sure you have this line in you `.npmrc` file, so you can load the package from the GitHub package repository:
+
+    @jensforstmann:registry=https://npm.pkg.github.com/jensforstmann
+
+Then install the package:
+
+    npm install @jensforstmann/factorio-blueprint-tools
+
+
+And use it in code:
+
+```typescript
+import { encode, decode } from '@jensforstmann/factorio-blueprint-tools';
+// or
+const { encode, decode } = require('@jensforstmann/factorio-blueprint-tools');
+```
+
 
 Available methods:
 
