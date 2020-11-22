@@ -1,5 +1,6 @@
-export * from './helper/encoder';
-export * from './helper/decoder';
+export * from './helper/encode';
+export * from './helper/decode';
+
 export * from './types/blueprint';
 export * from './types/blueprintBook';
 export * from './types/color';

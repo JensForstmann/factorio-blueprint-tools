@@ -1,6 +1,6 @@
-import { plan } from "../types/plan"
+import { Plan } from "../src/types/plan"
 
-const blueprint: plan = {
+const blueprint: Plan = {
     "deconstruction_planner": {
         "settings": {
             "trees_and_rocks_only": true

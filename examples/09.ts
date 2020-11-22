@@ -1,6 +1,6 @@
-import { plan } from "../types/plan"
+import { Plan } from "../src/types/plan"
 
-const blueprint: plan = {
+const blueprint: Plan = {
     "blueprint": {
         "icons": [
             {
