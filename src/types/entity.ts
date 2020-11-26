@@ -13,7 +13,7 @@ export type Entity = {
 	items?: { [key: string]: number };
 	recipe?: string;
 	bar?: number;
-	inventory?: { filters: ItemFilter[]; bar: number };
+	inventory?: { filters: ItemFilter[]; bar: number } | null;
 	infinity_settings?: any;
 	type?: 'input' | 'output';
 	input_priority?: 'right' | 'left';

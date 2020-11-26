@@ -1,6 +1,6 @@
 {
   "name": "@jensforstmann/factorio-blueprint-tools",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "JS/TS library for encoding and decoding Factorio blueprint strings (fully typed)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
