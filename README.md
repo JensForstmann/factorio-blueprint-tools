@@ -87,7 +87,7 @@ if (isBlueprint(plan)) {
     console.log(newBPString); // 0eNp9kNEKwjAMRX9l5LkONxVrv8B/EJFuCxrY0tFm4hj9d7vtQUHwKQTuOdxkgqodsPfEAmaCBkPtqRdyDAbO2LZOZQ/7xMyykwf6rHZdRWzF+RwUUO04gLlMEOjOtp0dMvaYYBLsUoJtN29zTizL5sNDTDw3+AJTxKsCZCEhXHXLMt546Cr0KfBXpKB3gdbSEyTfNj8oGJcZo/qxlT9A8QX875yKLpeZr8cpeKIPi63Uxf54Ko+7nS601jG+AXGqduE=
     
 } else {
-    console.error("not a valid factorio blueprint string");
+    console.error("not a blueprint");
 }
 ```
 ## Upcoming (maybe)
