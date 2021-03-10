@@ -36,30 +36,60 @@ const { encode, decode } = require('@jensforstmann/factorio-blueprint-tools');
 ```
 
 
-Available methods:
+Available functions:
 
-    - functions:
-        - decode
-        - encode
-        - type guards:
-            - isBlueprint
-            - isBlueprintBook
-            - isDeconstructionPLanner
-            - isUpgradePlanner
-    - types:
-        - blueprint
-        - blueprintBook
-        - color
-        - deconstructionPlanner
-        - entity
-        - icon
-        - itemFilter
-        - plan
-        - position
-        - signal
-        - tile
-        - upgradePlanner
+- decode
+- encode
+- type guards:
+    - isBlueprint
+    - isBlueprintBook
+    - isDeconstructionPLanner
+    - isUpgradePlanner
 
+Available types:
+- blueprint
+- blueprintBook
+- color
+- deconstructionPlanner
+- entity
+- icon
+- itemFilter
+- plan
+- position
+- signal
+- tile
+- upgradePlanner
+
+## Examples
+
+```typescript
+import { encode, decode, isBlueprint } from '@jensforstmann/factorio-blueprint-tools';
+
+const bpString = '0eNp9j90KwjAMhV9l5LoO5w/WPoHvICKdCxpY09JGcYy+u91E9EoIJCec85GM0PZ3DJFYwIzQYbpECkKewcAB+96rSm6UqlKWK3RBhuriOYllKYNria34WIMCmvZgjiMkurLtJ6AMAQuJBF1xsHWT+uQX3zzkkucOn2CafFKALCSEb9wshjPfXYuxGP6CFASf6P3BCIW3rLcKhrnnCT3fYn7+VvDAmObASjeb3X61W691o7XO+QX5HWGk';
+
+const plan = decode(bpString);
+
+if (isBlueprint(plan)) {
+    console.log(plan.blueprint.description); // Hello, this is an empty constant combinator.
+
+    plan.blueprint.description = "Hello, have another combinator.";
+    plan.blueprint.entities.push({
+        entity_number: plan.blueprint.entities.length + 1,
+        position: {
+            x: 1.5,
+            y: 0.5
+        },
+        name: "constant-combinator"
+    });
+
+    const newBpString = encode(plan);
+
+    console.log(newBPString); // 0eNp9kNEKwjAMRX9l5LkONxVrv8B/EJFuCxrY0tFm4hj9d7vtQUHwKQTuOdxkgqodsPfEAmaCBkPtqRdyDAbO2LZOZQ/7xMyykwf6rHZdRWzF+RwUUO04gLlMEOjOtp0dMvaYYBLsUoJtN29zTizL5sNDTDw3+AJTxKsCZCEhXHXLMt546Cr0KfBXpKB3gdbSEyTfNj8oGJcZo/qxlT9A8QX875yKLpeZr8cpeKIPi63Uxf54Ko+7nS601jG+AXGqduE=
+    
+} else {
+    console.error("not a valid factorio blueprint string");
+}
+```
 ## Upcoming (maybe)
 
 - get stats from bp (item counts, exportable as blueprint)
