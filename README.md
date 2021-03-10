@@ -7,11 +7,17 @@
     - support for deconstruction & upgrade planner
     - support for nested blueprint books
 
-## Usage
+## Prerequisites
 
-Make sure you have this line in you `.npmrc` file, so you can load the package from the GitHub package repository:
+Two steps are required to install packages from the GitHub package registry:
 
-    @jensforstmann:registry=https://npm.pkg.github.com
+1. Make sure you have this line in your [project's `.npmrc` file](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc), so the scope _@jensforstmann_ is bound to the GitHub package registry:
+
+        @jensforstmann:registry=https://npm.pkg.github.com
+
+2. [Authenticate to GitHub Packages](https://docs.github.com/en/packages/guides/configuring-npm-for-use-with-github-packages#authenticating-to-github-packages) (if not already done).
+
+## Installation
 
 Then install the package:
 
@@ -19,6 +25,7 @@ Then install the package:
     # or
     yarn add @jensforstmann/factorio-blueprint-tools
 
+## Usage
 
 And use it in code:
 
