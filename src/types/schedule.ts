@@ -1,6 +1,6 @@
-import { ScheduleRecord } from "./scheduleRecord";
+import { ScheduleRecord } from './scheduleRecord';
 
 export type Schedule = {
-    schedule: ScheduleRecord[];
-    locomotives: number[];
+	schedule: ScheduleRecord[];
+	locomotives: number[];
 };

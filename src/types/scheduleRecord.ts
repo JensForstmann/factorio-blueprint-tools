@@ -1,6 +1,6 @@
-import { WaitCondition } from "./waitCondition";
+import { WaitCondition } from './waitCondition';
 
 export type ScheduleRecord = {
-    station: string;
-    wait_conditions: WaitCondition[];
+	station: string;
+	wait_conditions: WaitCondition[];
 };
