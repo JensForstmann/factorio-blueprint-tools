@@ -1,5 +1,6 @@
 import { Plan } from '../types/plan';
 import { inflate } from 'pako';
+import { Buffer } from 'buffer';
 
 export function decode(str: string): Plan {
 	if (str[0] !== '0') throw 'wrong blueprint string format (can only handle version 0)';

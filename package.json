@@ -1,6 +1,6 @@
 {
   "name": "@jensforstmann/factorio-blueprint-tools",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "JS/TS library for encoding and decoding Factorio blueprint strings (fully typed)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,6 +13,7 @@
   "author": "Jens Forstmann",
   "license": "MIT",
   "dependencies": {
+    "buffer": "^6.0.3",
     "pako": "^2.0.4"
   },
   "repository": {
