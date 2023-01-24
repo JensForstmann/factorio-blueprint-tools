@@ -5,6 +5,7 @@ import { ConnectionPoint } from './connection';
 import { RequestFilter } from './requestFilter';
 
 export type Entity = {
+	/** 1-based */
 	entity_number: number;
 	name: string;
 	position: Position;
@@ -15,8 +16,13 @@ export type Entity = {
 	control_behavior?: any;
 	items?: { [key: string]: number };
 	recipe?: string;
+	/** 0-based */
 	bar?: number;
-	inventory?: { filters: ItemFilter[]; bar: number } | null;
+	inventory?: {
+		filters: ItemFilter[];
+		/** 0-based */
+		bar?: number;
+	} | null;
 	infinity_settings?: any;
 	type?: 'input' | 'output';
 	input_priority?: 'right' | 'left';

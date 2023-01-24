@@ -1,5 +1,6 @@
 export type RequestFilter = {
     name: string;
-    index: string;
+    /** 1-based */
+    index: number;
     count: number;
 };
