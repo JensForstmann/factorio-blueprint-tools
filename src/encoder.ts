@@ -1,7 +1,7 @@
-import { Plan } from '../types/plan';
+import { Plan } from './plan';
 import { deflate } from 'pako';
 import { Buffer } from 'buffer';
 
-export function encode(plan: Plan): string {
+export const encodePlan = (plan: Plan): string => {
 	return '0' + Buffer.from(deflate(JSON.stringify(plan), { level: 9 })).toString('base64');
-}
+};

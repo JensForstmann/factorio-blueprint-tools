@@ -1,15 +1,29 @@
-export * from './helper/encode';
-export * from './helper/decode';
+import { decodePlan } from './decoder';
+import { encodePlan } from './encoder';
 
-export * from './types/blueprint';
-export * from './types/blueprintBook';
-export * from './types/color';
-export * from './types/deconstructionPlanner';
-export * from './types/entity';
-export * from './types/icon';
-export * from './types/itemFilter';
-export * from './types/plan';
-export * from './types/position';
-export * from './types/signal';
-export * from './types/tile';
-export * from './types/upgradePlanner';
+export * from './blueprint';
+export * from './blueprintBook';
+export * from './color';
+export * from './connection';
+export * from './decoder';
+export * from './deconstructionPlanner';
+export * from './encoder';
+export * from './entity';
+export * from './icon';
+export * from './itemFilter';
+export * from './plan';
+export * from './position';
+export * from './requestFilter';
+export * from './signal';
+export * from './tile';
+export * from './upgradePlanner';
+
+/**
+ * @deprecated Use `decodePlan` instead. `decode` will be removed in the future!
+ */
+export const decode = decodePlan;
+
+/**
+ * @deprecated Use `encodePlan` instead. `encode` will be removed in the future!
+ */
+export const encode = encodePlan;
