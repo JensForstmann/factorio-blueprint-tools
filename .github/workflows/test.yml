@@ -32,5 +32,9 @@ jobs:
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Install Dependencies
         run: npm clean-install
-      - name: Run Tests
+      - name: Build
+        run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Test
         run: npm run test
