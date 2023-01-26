@@ -2,7 +2,7 @@
 
 ## Features
 
-- helper for encoding & decoding blueprint strings
+- encode & decode blueprint strings
 - fully typed
     - support for deconstruction & upgrade planner
     - support for nested blueprint books
@@ -18,16 +18,16 @@ yarn add @jensforstmann/factorio-blueprint-tools
 ## Usage
 
 ```typescript
-import { encode, decode } from '@jensforstmann/factorio-blueprint-tools';
+import { encodePlan, decodePlan } from '@jensforstmann/factorio-blueprint-tools';
 // or
-const { encode, decode } = require('@jensforstmann/factorio-blueprint-tools');
+const { encodePlan, decodePlan } = require('@jensforstmann/factorio-blueprint-tools');
 ```
 
 
 Available functions:
 
-- decode
-- encode
+- decodePlan
+- encodePlan
 - type guards:
     - isBlueprint
     - isBlueprintBook
@@ -47,22 +47,22 @@ Available types:
 - signal
 - tile
 - upgradePlanner
+- ... and more
 
 ## Examples
 
 ```typescript
-import { encode, decode, isBlueprint } from '@jensforstmann/factorio-blueprint-tools';
+import { encodePlan, decodePlan, isBlueprint, addEntity } from '@jensforstmann/factorio-blueprint-tools';
 
 const bpString = '0eNp9j90KwjAMhV9l5LoO5w/WPoHvICKdCxpY09JGcYy+u91E9EoIJCec85GM0PZ3DJFYwIzQYbpECkKewcAB+96rSm6UqlKWK3RBhuriOYllKYNria34WIMCmvZgjiMkurLtJ6AMAQuJBF1xsHWT+uQX3zzkkucOn2CafFKALCSEb9wshjPfXYuxGP6CFASf6P3BCIW3rLcKhrnnCT3fYn7+VvDAmObASjeb3X61W691o7XO+QX5HWGk';
 
-const plan = decode(bpString);
+const plan = decodePlan(bpString);
 
 if (isBlueprint(plan)) {
     console.log(plan.blueprint.description); // Hello, this is an empty constant combinator.
 
     plan.blueprint.description = "Hello, have another combinator.";
-    plan.blueprint.entities.push({
-        entity_number: plan.blueprint.entities.length + 1,
+    addEntity(plan, {
         position: {
             x: 1.5,
             y: 0.5
@@ -70,7 +70,7 @@ if (isBlueprint(plan)) {
         name: "constant-combinator"
     });
 
-    const newBpString = encode(plan);
+    const newBpString = encodePlan(plan);
 
     console.log(newBPString); // 0eNp9kNEKwjAMRX9l5LkONxVrv8B/EJFuCxrY0tFm4hj9d7vtQUHwKQTuOdxkgqodsPfEAmaCBkPtqRdyDAbO2LZOZQ/7xMyykwf6rHZdRWzF+RwUUO04gLlMEOjOtp0dMvaYYBLsUoJtN29zTizL5sNDTDw3+AJTxKsCZCEhXHXLMt546Cr0KfBXpKB3gdbSEyTfNj8oGJcZo/qxlT9A8QX875yKLpeZr8cpeKIPi63Uxf54Ko+7nS601jG+AXGqduE=
     
@@ -81,4 +81,3 @@ if (isBlueprint(plan)) {
 ## Upcoming (maybe)
 
 - get stats from bp (item counts, exportable as blueprint)
-- manipulate bp with easy to use api
