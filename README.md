@@ -1,3 +1,5 @@
+[![NPM Version](https://img.shields.io/npm/v/%40jensforstmann%2Ffactorio-blueprint-tools)](https://www.npmjs.com/package/@jensforstmann/factorio-blueprint-tools)
+
 # Factorio Blueprint Tools
 
 ## Features
