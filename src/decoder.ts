@@ -9,4 +9,4 @@ export const decodePlan = (str: string): Plan => {
 	} catch (e) {
 		throw e;
 	}
-}
+};
