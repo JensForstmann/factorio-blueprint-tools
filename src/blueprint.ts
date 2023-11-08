@@ -7,7 +7,7 @@ import { VERSION } from './version';
 export type Blueprint = {
 	blueprint: {
 		icons: Icon[];
-		entities: Entity[];
+		entities?: Entity[];
 		tiles?: Tile[];
 		item: 'blueprint';
 		label?: string;
@@ -21,7 +21,6 @@ export const createEmptyBlueprint = (): Blueprint => {
 	return {
 		blueprint: {
 			icons: [],
-			entities: [],
 			item: 'blueprint',
 			version: VERSION,
 		},
@@ -29,6 +28,9 @@ export const createEmptyBlueprint = (): Blueprint => {
 };
 
 export const addEntity = (blueprint: Blueprint, entity: Omit<Entity, 'entity_number'>) => {
+	if (!blueprint.blueprint.entities) {
+		blueprint.blueprint.entities = [];
+	}
 	const newEntity: Entity = {
 		...entity,
 		entity_number: blueprint.blueprint.entities.length + 1,
