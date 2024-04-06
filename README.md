@@ -80,6 +80,3 @@ if (isBlueprint(plan)) {
     console.error("not a blueprint");
 }
 ```
-## Upcoming (maybe)
-
-- get stats from bp (item counts, exportable as blueprint)

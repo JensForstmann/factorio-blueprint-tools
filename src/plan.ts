@@ -4,11 +4,7 @@ import { DeconstructionPlanner } from './deconstructionPlanner';
 import { UpgradePlanner } from './upgradePlanner';
 
 export type Plan = Blueprint | BlueprintBook | DeconstructionPlanner | UpgradePlanner;
-type DeepPartial<T> = T extends object
-	? {
-			[P in keyof T]?: DeepPartial<T[P]>;
-	  }
-	: T;
+type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T;
 
 const isObject = (u: unknown): u is object => {
 	return typeof u === 'object' && u !== null;
