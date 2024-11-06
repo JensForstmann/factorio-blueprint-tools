@@ -1,4 +1,4 @@
-import { Plan } from "../src/types/plan"
+import { Plan } from "../src/plan";
 
 const blueprint: Plan = {
     "blueprint": {
@@ -213,4 +213,4 @@ const blueprint: Plan = {
         "label": "2-belt lane balancer",
         "version": 77311705089
     }
-}
+};

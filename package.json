@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
-    "clean": "prettier --write ./src",
+    "clean": "prettier ./src ./test --write",
     "test": "nyc mocha test/**/*.ts",
     "prepare": "npm run build"
   },

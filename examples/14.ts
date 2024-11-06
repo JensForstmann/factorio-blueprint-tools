@@ -1,4 +1,4 @@
-import { Plan } from "../src/types/plan"
+import { Plan } from "../src/plan";
 
 const blueprint: Plan = {
     "blueprint": {
@@ -43012,4 +43012,4 @@ const blueprint: Plan = {
         "label": "1GW Nuclear",
         "version": 77311705089
     }
-}
+};

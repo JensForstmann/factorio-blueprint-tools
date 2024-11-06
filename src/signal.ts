@@ -1,4 +1,5 @@
 export type Signal = {
-	type: string;
+	type?: string;
 	name: string;
+	quality?: string;
 };

@@ -1,5 +1,9 @@
+import { Comparator } from './circuitCondition';
+
 export type ItemFilter = {
-	name: string;
 	/** 1-based */
 	index: number;
+	name: string;
+	quality?: string;
+	comparator?: Comparator;
 };

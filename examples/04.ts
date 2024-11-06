@@ -1,4 +1,4 @@
-import { Plan } from "../src/types/plan"
+import { Plan } from "../src/plan";
 
 const blueprint: Plan = {
     "blueprint_book": {
@@ -106,4 +106,4 @@ const blueprint: Plan = {
         "active_index": 0,
         "version": 281474976710656
     }
-}
+};

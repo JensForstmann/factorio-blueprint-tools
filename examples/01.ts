@@ -1,4 +1,4 @@
-import { Plan } from "../src/types/plan"
+import { Plan } from "../src/plan";
 
 const blueprint: Plan = {
     "deconstruction_planner": {
@@ -23,7 +23,7 @@ const blueprint: Plan = {
             ],
             "tile_filters": [
                 {
-                    "name": "Arci-marking-white-dl-left-turn-down",
+                    "name": "stone-path",
                     "index": 3
                 },
                 {
@@ -53,4 +53,4 @@ const blueprint: Plan = {
         "label": "deconNAME",
         "version": 281474976710656
     }
-}
+};

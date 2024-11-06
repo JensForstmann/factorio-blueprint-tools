@@ -1,4 +1,4 @@
-import { Plan } from "../src/types/plan"
+import { Plan } from "../src/plan";
 
 const blueprint: Plan = {
     "upgrade_planner": {
@@ -11,7 +11,9 @@ const blueprint: Plan = {
                     },
                     "to": {
                         "type": "entity",
-                        "name": "fast-transport-belt"
+                        "name": "fast-transport-belt",
+                        "module_limit": 0,
+                        "module_slots": []
                     },
                     "index": 0
                 }
@@ -20,4 +22,4 @@ const blueprint: Plan = {
         "item": "upgrade-planner",
         "version": 281474976710656
     }
-}
+};

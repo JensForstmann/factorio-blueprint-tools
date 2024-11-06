@@ -1,16 +1,24 @@
+import { CircuitCondition } from './circuitCondition';
+
 export type WaitCondition = {
 	type:
-		| 'time'
-		| 'inactivity'
-		| 'full'
-		| 'empty'
-		| 'item_count'
 		| 'circuit'
-		| 'robots_inactive'
+		| 'empty'
 		| 'fluid_count'
+		| 'fuel_item_count_all'
+		| 'fuel_item_count_any'
+		| 'full'
+		| 'fuel_full'
+		| 'not_empty'
+		| 'inactivity'
+		| 'item_count'
+		| 'passenger_not_present'
 		| 'passenger_present'
-		| 'passenger_not_present';
+		| 'specific_destination_full'
+		| 'specific_destination_not_full'
+		| 'time';
 	compare_type: 'and' | 'or';
 	ticks?: number;
-	condition?: any; // CircuitCondition
+	condition?: CircuitCondition;
+	station?: string;
 };

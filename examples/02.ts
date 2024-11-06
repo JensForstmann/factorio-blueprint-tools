@@ -1,4 +1,4 @@
-import { Plan } from "../src/types/plan"
+import { Plan } from "../src/plan";
 
 const blueprint: Plan = {
     "deconstruction_planner": {
@@ -6,4 +6,4 @@ const blueprint: Plan = {
         "item": "deconstruction-planner",
         "version": 281474976710656
     }
-}
+};

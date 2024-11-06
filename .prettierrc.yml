@@ -5,3 +5,8 @@ semi: true
 singleQuote: true
 printWidth: 100
 useTabs: true
+overrides:
+  - files: ['**/*.yaml', '**/*.yml']
+    options:
+      tabWidth: 2
+      useTabs: false
