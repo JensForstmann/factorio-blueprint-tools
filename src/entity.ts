@@ -223,7 +223,7 @@ export type Entity = {
 	fluid_filter?: string;
 
 	request_filters?: {
-		sections: Array<{
+		sections?: Array<{
 			/** 1-based */
 			index: number;
 			filters?: Array<{
