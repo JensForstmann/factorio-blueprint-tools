@@ -18,10 +18,14 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           registry-url: 'https://registry.npmjs.org'
-      - uses: actions/checkout@v4
+      - name: Install latest npm # Ensure latest npm for trusted publishing
+        run: sudo npm install -g npm@latest
       - name: Install Dependencies
         run: npm clean-install
       - name: Build
