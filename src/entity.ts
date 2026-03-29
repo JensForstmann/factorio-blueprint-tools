@@ -170,7 +170,7 @@ export type Entity = {
 				inventory: number;
 				/** 0-based */
 				stack: number;
-				count?: 0;
+				count?: number;
 			}>;
 			grid_count?: number;
 		};
