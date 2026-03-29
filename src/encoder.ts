@@ -1,4 +1,4 @@
-import { Plan } from './plan';
+import type { Plan } from './plan';
 import { deflate } from 'pako';
 import { Buffer } from 'buffer';
 

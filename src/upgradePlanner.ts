@@ -1,5 +1,5 @@
-import { Comparator } from './circuitCondition';
-import { Icon } from './icon';
+import type { Comparator } from './circuitCondition';
+import type { Icon } from './icon';
 
 export type UpgradePlanner = {
 	upgrade_planner: {

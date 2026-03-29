@@ -1,4 +1,4 @@
-import { WaitCondition } from './waitCondition';
+import type { WaitCondition } from './waitCondition';
 
 export type ScheduleRecord = {
 	records: Array<{

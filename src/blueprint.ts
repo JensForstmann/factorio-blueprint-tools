@@ -1,10 +1,10 @@
-import { Icon } from './icon';
-import { Entity } from './entity';
-import { Tile } from './tile';
-import { Schedule } from './schedule';
+import type { Icon } from './icon';
+import type { Entity } from './entity';
+import type { Tile } from './tile';
+import type { Schedule } from './schedule';
 import { VERSION } from './version';
-import { Position } from './position';
-import { Color } from './color';
+import type { Position } from './position';
+import type { Color } from './color';
 
 export type Blueprint = {
 	blueprint: {

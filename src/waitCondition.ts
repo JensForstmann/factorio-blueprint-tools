@@ -1,4 +1,4 @@
-import { CircuitCondition } from './circuitCondition';
+import type { CircuitCondition } from './circuitCondition';
 
 export type WaitCondition = {
 	type:

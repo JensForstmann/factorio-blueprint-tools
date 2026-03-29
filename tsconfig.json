@@ -1,13 +1,19 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "commonjs",
+		"module": "esnext",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
+		"noImplicitReturns": true,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
 		"skipLibCheck": true,
 		"noUncheckedIndexedAccess": true,
-		"noEmit": true
+		"noEmit": true,
+		"verbatimModuleSyntax": true,
 	},
 	"include": ["./src/**/*"]
 }

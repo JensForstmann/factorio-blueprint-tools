@@ -1,9 +1,9 @@
-import { Position } from './position';
-import { Color } from './color';
-import { ItemFilter } from './itemFilter';
-import { Signal } from './signal';
-import { CircuitCondition, Comparator } from './circuitCondition';
-import { Operator } from './operator';
+import type { Position } from './position';
+import type { Color } from './color';
+import type { ItemFilter } from './itemFilter';
+import type { Signal } from './signal';
+import type { CircuitCondition, Comparator } from './circuitCondition';
+import type { Operator } from './operator';
 
 export type Entity = {
 	/** 1-based */

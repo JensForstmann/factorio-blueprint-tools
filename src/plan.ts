@@ -1,7 +1,7 @@
-import { Blueprint } from './blueprint';
-import { BlueprintBook } from './blueprintBook';
-import { DeconstructionPlanner } from './deconstructionPlanner';
-import { UpgradePlanner } from './upgradePlanner';
+import type { Blueprint } from './blueprint';
+import type { BlueprintBook } from './blueprintBook';
+import type { DeconstructionPlanner } from './deconstructionPlanner';
+import type { UpgradePlanner } from './upgradePlanner';
 
 export type Plan = Blueprint | BlueprintBook | DeconstructionPlanner | UpgradePlanner;
 type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T;

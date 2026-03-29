@@ -1,5 +1,5 @@
-import { Icon } from './icon';
-import { Plan } from './plan';
+import type { Icon } from './icon';
+import type { Plan } from './plan';
 import { VERSION } from './version';
 
 export type BlueprintBookPlan = Plan & {
