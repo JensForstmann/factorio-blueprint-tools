@@ -4,7 +4,7 @@ import 'mocha';
 import { encodePlan, decodePlan } from '../src';
 import * as examples from './examples';
 
-describe('encodePlan', function () {
+describe('encoder', function () {
 	it('should return a string', function () {
 		const result = encodePlan(examples.bpObject1);
 		expect(result).to.be.a('string');

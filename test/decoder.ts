@@ -4,7 +4,7 @@ import 'mocha';
 import { encodePlan, decodePlan, isBlueprint } from '../src';
 import * as examples from './examples';
 
-describe('decode', function () {
+describe('decoder', function () {
 	it('should return an object', function () {
 		const result = decodePlan(examples.bpString1);
 		expect(result).to.be.an('object');
