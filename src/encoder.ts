@@ -1,7 +1,12 @@
 import type { Plan } from './plan';
 import { deflate } from 'pako';
-import { Buffer } from 'buffer';
 
 export const encodePlan = (plan: Plan): string => {
-	return '0' + Buffer.from(deflate(JSON.stringify(plan), { level: 9 })).toString('base64');
+	const json = JSON.stringify(plan);
+	const compressed = deflate(new TextEncoder().encode(json), { level: 9 });
+
+	let binary = '';
+	for (const byte of compressed) binary += String.fromCharCode(byte);
+
+	return '0' + btoa(binary);
 };
